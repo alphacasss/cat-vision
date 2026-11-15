@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Camera / lens ring -->
+    <path
+        android:pathData="M24,54a30,30 0,1 0,60 0a30,30 0,1 0,-60 0"
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFF7A1A"
+        android:strokeWidth="4"
+        android:strokeLineCap="round" />
+
+    <!-- Aperture ticks -->
+    <path
+        android:pathData="M54,20L54,24M54,84L54,88M20,54L24,54M84,54L88,54"
+        android:fillColor="#00000000"
+        android:strokeColor="#CCFFB054"
+        android:strokeWidth="2"
+        android:strokeLineCap="round" />
+
+    <!-- Cat ears -->
+    <path
+        android:pathData="M38,51L35.5,30.5L50,39.5Z"
+        android:fillColor="#FFF7F9FC" />
+    <path
+        android:pathData="M70,51L72.5,30.5L58,39.5Z"
+        android:fillColor="#FFF7F9FC" />
+
+    <!-- Inner ears -->
+    <path
+        android:pathData="M39.6,48L38.6,35L46,40.4Z"
+        android:fillColor="#FFFF9E5C" />
+    <path
+        android:pathData="M68.4,48L69.4,35L62,40.4Z"
+        android:fillColor="#FFFF9E5C" />
+
+    <!-- Cat head -->
+    <path
+        android:pathData="M36,57a18,18 0,1 0,36 0a18,18 0,1 0,-36 0"
+        android:fillColor="#FFF7F9FC" />
+
+    <!-- Eyes -->
+    <path
+        android:pathData="M47.5,55m-2.6,0a2.6,2.6 0,1 0,5.2 0a2.6,2.6 0,1 0,-5.2 0"
+        android:fillColor="#FF0D1016" />
+    <path
+        android:pathData="M60.5,55m-2.6,0a2.6,2.6 0,1 0,5.2 0a2.6,2.6 0,1 0,-5.2 0"
+        android:fillColor="#FF0D1016" />
+
+    <!-- Eye highlights -->
+    <path
+        android:pathData="M48.4,54.1m-1,0a1,1 0,1 0,2 0a1,1 0,1 0,-2 0"
+        android:fillColor="#E6FFFFFF" />
+    <path
+        android:pathData="M61.4,54.1m-1,0a1,1 0,1 0,2 0a1,1 0,1 0,-2 0"
+        android:fillColor="#E6FFFFFF" />
+
+    <!-- Nose -->
+    <path
+        android:pathData="M51.5,61L56.5,61L54,64.6Z"
+        android:fillColor="#FFFF7A1A" />
+
+    <!-- Mouth -->
+    <path
+        android:pathData="M51,65.4Q54,68 54,65.4M54,65.4Q54,68 57,65.4"
+        android:fillColor="#00000000"
+        android:strokeColor="#FF96A0AF"
+        android:strokeWidth="1.4"
+        android:strokeLineCap="round" />
+
+    <!-- Whiskers -->
+    <path
+        android:pathData="M45,61.5L33,59.5M45,66L33,67.8M63,61.5L75,59.5M63,66L75,67.8"
+        android:fillColor="#00000000"
+        android:strokeColor="#CCF7F9FC"
+        android:strokeWidth="1.4"
+        android:strokeLineCap="round" />
+</vector>

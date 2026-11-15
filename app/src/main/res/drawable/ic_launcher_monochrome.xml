@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Monochrome version: ring + cat silhouette -->
+    <path
+        android:pathData="M24,54a30,30 0,1 0,60 0a30,30 0,1 0,-60 0"
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round" />
+
+    <path android:pathData="M38,51L35.5,30.5L50,39.5Z" android:fillColor="#FFFFFFFF" />
+    <path android:pathData="M70,51L72.5,30.5L58,39.5Z" android:fillColor="#FFFFFFFF" />
+    <path
+        android:pathData="M36,57a18,18 0,1 0,36 0a18,18 0,1 0,-36 0"
+        android:fillColor="#FFFFFFFF" />
+
+    <path
+        android:pathData="M47.5,55m-2.6,0a2.6,2.6 0,1 0,5.2 0a2.6,2.6 0,1 0,-5.2 0"
+        android:fillColor="#FF000000" />
+    <path
+        android:pathData="M60.5,55m-2.6,0a2.6,2.6 0,1 0,5.2 0a2.6,2.6 0,1 0,-5.2 0"
+        android:fillColor="#FF000000" />
+    <path android:pathData="M51.5,61L56.5,61L54,64.6Z" android:fillColor="#FF000000" />
+</vector>

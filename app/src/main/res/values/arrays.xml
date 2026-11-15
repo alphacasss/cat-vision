@@ -1,0 +1,1005 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="imagenet_labels">
+        <item>tench</item>
+        <item>goldfish</item>
+        <item>great white shark</item>
+        <item>tiger shark</item>
+        <item>hammerhead</item>
+        <item>electric ray</item>
+        <item>stingray</item>
+        <item>cock</item>
+        <item>hen</item>
+        <item>ostrich</item>
+        <item>brambling</item>
+        <item>goldfinch</item>
+        <item>house finch</item>
+        <item>junco</item>
+        <item>indigo bunting</item>
+        <item>robin</item>
+        <item>bulbul</item>
+        <item>jay</item>
+        <item>magpie</item>
+        <item>chickadee</item>
+        <item>water ouzel</item>
+        <item>kite</item>
+        <item>bald eagle</item>
+        <item>vulture</item>
+        <item>great grey owl</item>
+        <item>European fire salamander</item>
+        <item>common newt</item>
+        <item>eft</item>
+        <item>spotted salamander</item>
+        <item>axolotl</item>
+        <item>bullfrog</item>
+        <item>tree frog</item>
+        <item>tailed frog</item>
+        <item>loggerhead</item>
+        <item>leatherback turtle</item>
+        <item>mud turtle</item>
+        <item>terrapin</item>
+        <item>box turtle</item>
+        <item>banded gecko</item>
+        <item>common iguana</item>
+        <item>American chameleon</item>
+        <item>whiptail</item>
+        <item>agama</item>
+        <item>frilled lizard</item>
+        <item>alligator lizard</item>
+        <item>Gila monster</item>
+        <item>green lizard</item>
+        <item>African chameleon</item>
+        <item>Komodo dragon</item>
+        <item>African crocodile</item>
+        <item>American alligator</item>
+        <item>triceratops</item>
+        <item>thunder snake</item>
+        <item>ringneck snake</item>
+        <item>hognose snake</item>
+        <item>green snake</item>
+        <item>king snake</item>
+        <item>garter snake</item>
+        <item>water snake</item>
+        <item>vine snake</item>
+        <item>night snake</item>
+        <item>boa constrictor</item>
+        <item>rock python</item>
+        <item>Indian cobra</item>
+        <item>green mamba</item>
+        <item>sea snake</item>
+        <item>horned viper</item>
+        <item>diamondback</item>
+        <item>sidewinder</item>
+        <item>trilobite</item>
+        <item>harvestman</item>
+        <item>scorpion</item>
+        <item>black and gold garden spider</item>
+        <item>barn spider</item>
+        <item>garden spider</item>
+        <item>black widow</item>
+        <item>tarantula</item>
+        <item>wolf spider</item>
+        <item>tick</item>
+        <item>centipede</item>
+        <item>black grouse</item>
+        <item>ptarmigan</item>
+        <item>ruffed grouse</item>
+        <item>prairie chicken</item>
+        <item>peacock</item>
+        <item>quail</item>
+        <item>partridge</item>
+        <item>African grey</item>
+        <item>macaw</item>
+        <item>sulphur-crested cockatoo</item>
+        <item>lorikeet</item>
+        <item>coucal</item>
+        <item>bee eater</item>
+        <item>hornbill</item>
+        <item>hummingbird</item>
+        <item>jacamar</item>
+        <item>toucan</item>
+        <item>drake</item>
+        <item>red-breasted merganser</item>
+        <item>goose</item>
+        <item>black swan</item>
+        <item>tusker</item>
+        <item>echidna</item>
+        <item>platypus</item>
+        <item>wallaby</item>
+        <item>koala</item>
+        <item>wombat</item>
+        <item>jellyfish</item>
+        <item>sea anemone</item>
+        <item>brain coral</item>
+        <item>flatworm</item>
+        <item>nematode</item>
+        <item>conch</item>
+        <item>snail</item>
+        <item>slug</item>
+        <item>sea slug</item>
+        <item>chiton</item>
+        <item>chambered nautilus</item>
+        <item>Dungeness crab</item>
+        <item>rock crab</item>
+        <item>fiddler crab</item>
+        <item>king crab</item>
+        <item>American lobster</item>
+        <item>spiny lobster</item>
+        <item>crayfish</item>
+        <item>hermit crab</item>
+        <item>isopod</item>
+        <item>white stork</item>
+        <item>black stork</item>
+        <item>spoonbill</item>
+        <item>flamingo</item>
+        <item>little blue heron</item>
+        <item>American egret</item>
+        <item>bittern</item>
+        <item>crane</item>
+        <item>limpkin</item>
+        <item>European gallinule</item>
+        <item>American coot</item>
+        <item>bustard</item>
+        <item>ruddy turnstone</item>
+        <item>red-backed sandpiper</item>
+        <item>redshank</item>
+        <item>dowitcher</item>
+        <item>oystercatcher</item>
+        <item>pelican</item>
+        <item>king penguin</item>
+        <item>albatross</item>
+        <item>grey whale</item>
+        <item>killer whale</item>
+        <item>dugong</item>
+        <item>sea lion</item>
+        <item>Chihuahua</item>
+        <item>Japanese spaniel</item>
+        <item>Maltese dog</item>
+        <item>Pekinese</item>
+        <item>Shih-Tzu</item>
+        <item>Blenheim spaniel</item>
+        <item>papillon</item>
+        <item>toy terrier</item>
+        <item>Rhodesian ridgeback</item>
+        <item>Afghan hound</item>
+        <item>basset</item>
+        <item>beagle</item>
+        <item>bloodhound</item>
+        <item>bluetick</item>
+        <item>black-and-tan coonhound</item>
+        <item>Walker hound</item>
+        <item>English foxhound</item>
+        <item>redbone</item>
+        <item>borzoi</item>
+        <item>Irish wolfhound</item>
+        <item>Italian greyhound</item>
+        <item>whippet</item>
+        <item>Ibizan hound</item>
+        <item>Norwegian elkhound</item>
+        <item>otterhound</item>
+        <item>Saluki</item>
+        <item>Scottish deerhound</item>
+        <item>Weimaraner</item>
+        <item>Staffordshire bullterrier</item>
+        <item>American Staffordshire terrier</item>
+        <item>Bedlington terrier</item>
+        <item>Border terrier</item>
+        <item>Kerry blue terrier</item>
+        <item>Irish terrier</item>
+        <item>Norfolk terrier</item>
+        <item>Norwich terrier</item>
+        <item>Yorkshire terrier</item>
+        <item>wire-haired fox terrier</item>
+        <item>Lakeland terrier</item>
+        <item>Sealyham terrier</item>
+        <item>Airedale</item>
+        <item>cairn</item>
+        <item>Australian terrier</item>
+        <item>Dandie Dinmont</item>
+        <item>Boston bull</item>
+        <item>miniature schnauzer</item>
+        <item>giant schnauzer</item>
+        <item>standard schnauzer</item>
+        <item>Scotch terrier</item>
+        <item>Tibetan terrier</item>
+        <item>silky terrier</item>
+        <item>soft-coated wheaten terrier</item>
+        <item>West Highland white terrier</item>
+        <item>Lhasa</item>
+        <item>flat-coated retriever</item>
+        <item>curly-coated retriever</item>
+        <item>golden retriever</item>
+        <item>Labrador retriever</item>
+        <item>Chesapeake Bay retriever</item>
+        <item>German short-haired pointer</item>
+        <item>vizsla</item>
+        <item>English setter</item>
+        <item>Irish setter</item>
+        <item>Gordon setter</item>
+        <item>Brittany spaniel</item>
+        <item>clumber</item>
+        <item>English springer</item>
+        <item>Welsh springer spaniel</item>
+        <item>cocker spaniel</item>
+        <item>Sussex spaniel</item>
+        <item>Irish water spaniel</item>
+        <item>kuvasz</item>
+        <item>schipperke</item>
+        <item>groenendael</item>
+        <item>malinois</item>
+        <item>briard</item>
+        <item>kelpie</item>
+        <item>komondor</item>
+        <item>Old English sheepdog</item>
+        <item>Shetland sheepdog</item>
+        <item>collie</item>
+        <item>Border collie</item>
+        <item>Bouvier des Flandres</item>
+        <item>Rottweiler</item>
+        <item>German shepherd</item>
+        <item>Doberman</item>
+        <item>miniature pinscher</item>
+        <item>Greater Swiss Mountain dog</item>
+        <item>Bernese mountain dog</item>
+        <item>Appenzeller</item>
+        <item>EntleBucher</item>
+        <item>boxer</item>
+        <item>bull mastiff</item>
+        <item>Tibetan mastiff</item>
+        <item>French bulldog</item>
+        <item>Great Dane</item>
+        <item>Saint Bernard</item>
+        <item>Eskimo dog</item>
+        <item>malamute</item>
+        <item>Siberian husky</item>
+        <item>dalmatian</item>
+        <item>affenpinscher</item>
+        <item>basenji</item>
+        <item>pug</item>
+        <item>Leonberg</item>
+        <item>Newfoundland</item>
+        <item>Great Pyrenees</item>
+        <item>Samoyed</item>
+        <item>Pomeranian</item>
+        <item>chow</item>
+        <item>keeshond</item>
+        <item>Brabancon griffon</item>
+        <item>Pembroke</item>
+        <item>Cardigan</item>
+        <item>toy poodle</item>
+        <item>miniature poodle</item>
+        <item>standard poodle</item>
+        <item>Mexican hairless</item>
+        <item>timber wolf</item>
+        <item>white wolf</item>
+        <item>red wolf</item>
+        <item>coyote</item>
+        <item>dingo</item>
+        <item>dhole</item>
+        <item>African hunting dog</item>
+        <item>hyena</item>
+        <item>red fox</item>
+        <item>kit fox</item>
+        <item>Arctic fox</item>
+        <item>grey fox</item>
+        <item>tabby</item>
+        <item>tiger cat</item>
+        <item>Persian cat</item>
+        <item>Siamese cat</item>
+        <item>Egyptian cat</item>
+        <item>cougar</item>
+        <item>lynx</item>
+        <item>leopard</item>
+        <item>snow leopard</item>
+        <item>jaguar</item>
+        <item>lion</item>
+        <item>tiger</item>
+        <item>cheetah</item>
+        <item>brown bear</item>
+        <item>American black bear</item>
+        <item>ice bear</item>
+        <item>sloth bear</item>
+        <item>mongoose</item>
+        <item>meerkat</item>
+        <item>tiger beetle</item>
+        <item>ladybug</item>
+        <item>ground beetle</item>
+        <item>long-horned beetle</item>
+        <item>leaf beetle</item>
+        <item>dung beetle</item>
+        <item>rhinoceros beetle</item>
+        <item>weevil</item>
+        <item>fly</item>
+        <item>bee</item>
+        <item>ant</item>
+        <item>grasshopper</item>
+        <item>cricket</item>
+        <item>walking stick</item>
+        <item>cockroach</item>
+        <item>mantis</item>
+        <item>cicada</item>
+        <item>leafhopper</item>
+        <item>lacewing</item>
+        <item>dragonfly</item>
+        <item>damselfly</item>
+        <item>admiral</item>
+        <item>ringlet</item>
+        <item>monarch</item>
+        <item>cabbage butterfly</item>
+        <item>sulphur butterfly</item>
+        <item>lycaenid</item>
+        <item>starfish</item>
+        <item>sea urchin</item>
+        <item>sea cucumber</item>
+        <item>wood rabbit</item>
+        <item>hare</item>
+        <item>Angora</item>
+        <item>hamster</item>
+        <item>porcupine</item>
+        <item>fox squirrel</item>
+        <item>marmot</item>
+        <item>beaver</item>
+        <item>guinea pig</item>
+        <item>sorrel</item>
+        <item>zebra</item>
+        <item>hog</item>
+        <item>wild boar</item>
+        <item>warthog</item>
+        <item>hippopotamus</item>
+        <item>ox</item>
+        <item>water buffalo</item>
+        <item>bison</item>
+        <item>ram</item>
+        <item>bighorn</item>
+        <item>ibex</item>
+        <item>hartebeest</item>
+        <item>impala</item>
+        <item>gazelle</item>
+        <item>Arabian camel</item>
+        <item>llama</item>
+        <item>weasel</item>
+        <item>mink</item>
+        <item>polecat</item>
+        <item>black-footed ferret</item>
+        <item>otter</item>
+        <item>skunk</item>
+        <item>badger</item>
+        <item>armadillo</item>
+        <item>three-toed sloth</item>
+        <item>orangutan</item>
+        <item>gorilla</item>
+        <item>chimpanzee</item>
+        <item>gibbon</item>
+        <item>siamang</item>
+        <item>guenon</item>
+        <item>patas</item>
+        <item>baboon</item>
+        <item>macaque</item>
+        <item>langur</item>
+        <item>colobus</item>
+        <item>proboscis monkey</item>
+        <item>marmoset</item>
+        <item>capuchin</item>
+        <item>howler monkey</item>
+        <item>titi</item>
+        <item>spider monkey</item>
+        <item>squirrel monkey</item>
+        <item>Madagascar cat</item>
+        <item>indri</item>
+        <item>Indian elephant</item>
+        <item>African elephant</item>
+        <item>lesser panda</item>
+        <item>giant panda</item>
+        <item>barracouta</item>
+        <item>eel</item>
+        <item>coho</item>
+        <item>rock beauty</item>
+        <item>anemone fish</item>
+        <item>sturgeon</item>
+        <item>gar</item>
+        <item>lionfish</item>
+        <item>puffer</item>
+        <item>abacus</item>
+        <item>abaya</item>
+        <item>academic gown</item>
+        <item>accordion</item>
+        <item>acoustic guitar</item>
+        <item>aircraft carrier</item>
+        <item>airliner</item>
+        <item>airship</item>
+        <item>altar</item>
+        <item>ambulance</item>
+        <item>amphibian</item>
+        <item>analog clock</item>
+        <item>apiary</item>
+        <item>apron</item>
+        <item>ashcan</item>
+        <item>assault rifle</item>
+        <item>backpack</item>
+        <item>bakery</item>
+        <item>balance beam</item>
+        <item>balloon</item>
+        <item>ballpoint</item>
+        <item>Band Aid</item>
+        <item>banjo</item>
+        <item>bannister</item>
+        <item>barbell</item>
+        <item>barber chair</item>
+        <item>barbershop</item>
+        <item>barn</item>
+        <item>barometer</item>
+        <item>barrel</item>
+        <item>barrow</item>
+        <item>baseball</item>
+        <item>basketball</item>
+        <item>bassinet</item>
+        <item>bassoon</item>
+        <item>bathing cap</item>
+        <item>bath towel</item>
+        <item>bathtub</item>
+        <item>beach wagon</item>
+        <item>beacon</item>
+        <item>beaker</item>
+        <item>bearskin</item>
+        <item>beer bottle</item>
+        <item>beer glass</item>
+        <item>bell cote</item>
+        <item>bib</item>
+        <item>bicycle-built-for-two</item>
+        <item>bikini</item>
+        <item>binder</item>
+        <item>binoculars</item>
+        <item>birdhouse</item>
+        <item>boathouse</item>
+        <item>bobsled</item>
+        <item>bolo tie</item>
+        <item>bonnet</item>
+        <item>bookcase</item>
+        <item>bookshop</item>
+        <item>bottlecap</item>
+        <item>bow</item>
+        <item>bow tie</item>
+        <item>brass</item>
+        <item>brassiere</item>
+        <item>breakwater</item>
+        <item>breastplate</item>
+        <item>broom</item>
+        <item>bucket</item>
+        <item>buckle</item>
+        <item>bulletproof vest</item>
+        <item>bullet train</item>
+        <item>butcher shop</item>
+        <item>cab</item>
+        <item>caldron</item>
+        <item>candle</item>
+        <item>cannon</item>
+        <item>canoe</item>
+        <item>can opener</item>
+        <item>cardigan</item>
+        <item>car mirror</item>
+        <item>carousel</item>
+        <item>carpenters kit</item>
+        <item>carton</item>
+        <item>car wheel</item>
+        <item>cash machine</item>
+        <item>cassette</item>
+        <item>cassette player</item>
+        <item>castle</item>
+        <item>catamaran</item>
+        <item>CD player</item>
+        <item>cello</item>
+        <item>cellular telephone</item>
+        <item>chain</item>
+        <item>chainlink fence</item>
+        <item>chain mail</item>
+        <item>chain saw</item>
+        <item>chest</item>
+        <item>chiffonier</item>
+        <item>chime</item>
+        <item>china cabinet</item>
+        <item>Christmas stocking</item>
+        <item>church</item>
+        <item>cinema</item>
+        <item>cleaver</item>
+        <item>cliff dwelling</item>
+        <item>cloak</item>
+        <item>clog</item>
+        <item>cocktail shaker</item>
+        <item>coffee mug</item>
+        <item>coffeepot</item>
+        <item>coil</item>
+        <item>combination lock</item>
+        <item>computer keyboard</item>
+        <item>confectionery</item>
+        <item>container ship</item>
+        <item>convertible</item>
+        <item>corkscrew</item>
+        <item>cornet</item>
+        <item>cowboy boot</item>
+        <item>cowboy hat</item>
+        <item>cradle</item>
+        <item>crane</item>
+        <item>crash helmet</item>
+        <item>crate</item>
+        <item>crib</item>
+        <item>Crock Pot</item>
+        <item>croquet ball</item>
+        <item>crutch</item>
+        <item>cuirass</item>
+        <item>dam</item>
+        <item>desk</item>
+        <item>desktop computer</item>
+        <item>dial telephone</item>
+        <item>diaper</item>
+        <item>digital clock</item>
+        <item>digital watch</item>
+        <item>dining table</item>
+        <item>dishrag</item>
+        <item>dishwasher</item>
+        <item>disk brake</item>
+        <item>dock</item>
+        <item>dogsled</item>
+        <item>dome</item>
+        <item>doormat</item>
+        <item>drilling platform</item>
+        <item>drum</item>
+        <item>drumstick</item>
+        <item>dumbbell</item>
+        <item>Dutch oven</item>
+        <item>electric fan</item>
+        <item>electric guitar</item>
+        <item>electric locomotive</item>
+        <item>entertainment center</item>
+        <item>envelope</item>
+        <item>espresso maker</item>
+        <item>face powder</item>
+        <item>feather boa</item>
+        <item>file</item>
+        <item>fireboat</item>
+        <item>fire engine</item>
+        <item>fire screen</item>
+        <item>flagpole</item>
+        <item>flute</item>
+        <item>folding chair</item>
+        <item>football helmet</item>
+        <item>forklift</item>
+        <item>fountain</item>
+        <item>fountain pen</item>
+        <item>four-poster</item>
+        <item>freight car</item>
+        <item>French horn</item>
+        <item>frying pan</item>
+        <item>fur coat</item>
+        <item>garbage truck</item>
+        <item>gasmask</item>
+        <item>gas pump</item>
+        <item>goblet</item>
+        <item>go-kart</item>
+        <item>golf ball</item>
+        <item>golfcart</item>
+        <item>gondola</item>
+        <item>gong</item>
+        <item>gown</item>
+        <item>grand piano</item>
+        <item>greenhouse</item>
+        <item>grille</item>
+        <item>grocery store</item>
+        <item>guillotine</item>
+        <item>hair slide</item>
+        <item>hair spray</item>
+        <item>half track</item>
+        <item>hammer</item>
+        <item>hamper</item>
+        <item>hand blower</item>
+        <item>hand-held computer</item>
+        <item>handkerchief</item>
+        <item>hard disc</item>
+        <item>harmonica</item>
+        <item>harp</item>
+        <item>harvester</item>
+        <item>hatchet</item>
+        <item>holster</item>
+        <item>home theater</item>
+        <item>honeycomb</item>
+        <item>hook</item>
+        <item>hoopskirt</item>
+        <item>horizontal bar</item>
+        <item>horse cart</item>
+        <item>hourglass</item>
+        <item>iPod</item>
+        <item>iron</item>
+        <item>jack-o-lantern</item>
+        <item>jean</item>
+        <item>jeep</item>
+        <item>jersey</item>
+        <item>jigsaw puzzle</item>
+        <item>jinrikisha</item>
+        <item>joystick</item>
+        <item>kimono</item>
+        <item>knee pad</item>
+        <item>knot</item>
+        <item>lab coat</item>
+        <item>ladle</item>
+        <item>lampshade</item>
+        <item>laptop</item>
+        <item>lawn mower</item>
+        <item>lens cap</item>
+        <item>letter opener</item>
+        <item>library</item>
+        <item>lifeboat</item>
+        <item>lighter</item>
+        <item>limousine</item>
+        <item>liner</item>
+        <item>lipstick</item>
+        <item>Loafer</item>
+        <item>lotion</item>
+        <item>loudspeaker</item>
+        <item>loupe</item>
+        <item>lumbermill</item>
+        <item>magnetic compass</item>
+        <item>mailbag</item>
+        <item>mailbox</item>
+        <item>maillot</item>
+        <item>maillot</item>
+        <item>manhole cover</item>
+        <item>maraca</item>
+        <item>marimba</item>
+        <item>mask</item>
+        <item>matchstick</item>
+        <item>maypole</item>
+        <item>maze</item>
+        <item>measuring cup</item>
+        <item>medicine chest</item>
+        <item>megalith</item>
+        <item>microphone</item>
+        <item>microwave</item>
+        <item>military uniform</item>
+        <item>milk can</item>
+        <item>minibus</item>
+        <item>miniskirt</item>
+        <item>minivan</item>
+        <item>missile</item>
+        <item>mitten</item>
+        <item>mixing bowl</item>
+        <item>mobile home</item>
+        <item>Model T</item>
+        <item>modem</item>
+        <item>monastery</item>
+        <item>monitor</item>
+        <item>moped</item>
+        <item>mortar</item>
+        <item>mortarboard</item>
+        <item>mosque</item>
+        <item>mosquito net</item>
+        <item>motor scooter</item>
+        <item>mountain bike</item>
+        <item>mountain tent</item>
+        <item>mouse</item>
+        <item>mousetrap</item>
+        <item>moving van</item>
+        <item>muzzle</item>
+        <item>nail</item>
+        <item>neck brace</item>
+        <item>necklace</item>
+        <item>nipple</item>
+        <item>notebook</item>
+        <item>obelisk</item>
+        <item>oboe</item>
+        <item>ocarina</item>
+        <item>odometer</item>
+        <item>oil filter</item>
+        <item>organ</item>
+        <item>oscilloscope</item>
+        <item>overskirt</item>
+        <item>oxcart</item>
+        <item>oxygen mask</item>
+        <item>packet</item>
+        <item>paddle</item>
+        <item>paddlewheel</item>
+        <item>padlock</item>
+        <item>paintbrush</item>
+        <item>pajama</item>
+        <item>palace</item>
+        <item>panpipe</item>
+        <item>paper towel</item>
+        <item>parachute</item>
+        <item>parallel bars</item>
+        <item>park bench</item>
+        <item>parking meter</item>
+        <item>passenger car</item>
+        <item>patio</item>
+        <item>pay-phone</item>
+        <item>pedestal</item>
+        <item>pencil box</item>
+        <item>pencil sharpener</item>
+        <item>perfume</item>
+        <item>Petri dish</item>
+        <item>photocopier</item>
+        <item>pick</item>
+        <item>pickelhaube</item>
+        <item>picket fence</item>
+        <item>pickup</item>
+        <item>pier</item>
+        <item>piggy bank</item>
+        <item>pill bottle</item>
+        <item>pillow</item>
+        <item>ping-pong ball</item>
+        <item>pinwheel</item>
+        <item>pirate</item>
+        <item>pitcher</item>
+        <item>plane</item>
+        <item>planetarium</item>
+        <item>plastic bag</item>
+        <item>plate rack</item>
+        <item>plow</item>
+        <item>plunger</item>
+        <item>Polaroid camera</item>
+        <item>pole</item>
+        <item>police van</item>
+        <item>poncho</item>
+        <item>pool table</item>
+        <item>pop bottle</item>
+        <item>pot</item>
+        <item>potters wheel</item>
+        <item>power drill</item>
+        <item>prayer rug</item>
+        <item>printer</item>
+        <item>prison</item>
+        <item>projectile</item>
+        <item>projector</item>
+        <item>puck</item>
+        <item>punching bag</item>
+        <item>purse</item>
+        <item>quill</item>
+        <item>quilt</item>
+        <item>racer</item>
+        <item>racket</item>
+        <item>radiator</item>
+        <item>radio</item>
+        <item>radio telescope</item>
+        <item>rain barrel</item>
+        <item>recreational vehicle</item>
+        <item>reel</item>
+        <item>reflex camera</item>
+        <item>refrigerator</item>
+        <item>remote control</item>
+        <item>restaurant</item>
+        <item>revolver</item>
+        <item>rifle</item>
+        <item>rocking chair</item>
+        <item>rotisserie</item>
+        <item>rubber eraser</item>
+        <item>rugby ball</item>
+        <item>rule</item>
+        <item>running shoe</item>
+        <item>safe</item>
+        <item>safety pin</item>
+        <item>saltshaker</item>
+        <item>sandal</item>
+        <item>sarong</item>
+        <item>sax</item>
+        <item>scabbard</item>
+        <item>scale</item>
+        <item>school bus</item>
+        <item>schooner</item>
+        <item>scoreboard</item>
+        <item>screen</item>
+        <item>screw</item>
+        <item>screwdriver</item>
+        <item>seat belt</item>
+        <item>sewing machine</item>
+        <item>shield</item>
+        <item>shoe shop</item>
+        <item>shoji</item>
+        <item>shopping basket</item>
+        <item>shopping cart</item>
+        <item>shovel</item>
+        <item>shower cap</item>
+        <item>shower curtain</item>
+        <item>ski</item>
+        <item>ski mask</item>
+        <item>sleeping bag</item>
+        <item>slide rule</item>
+        <item>sliding door</item>
+        <item>slot</item>
+        <item>snorkel</item>
+        <item>snowmobile</item>
+        <item>snowplow</item>
+        <item>soap dispenser</item>
+        <item>soccer ball</item>
+        <item>sock</item>
+        <item>solar dish</item>
+        <item>sombrero</item>
+        <item>soup bowl</item>
+        <item>space bar</item>
+        <item>space heater</item>
+        <item>space shuttle</item>
+        <item>spatula</item>
+        <item>speedboat</item>
+        <item>spider web</item>
+        <item>spindle</item>
+        <item>sports car</item>
+        <item>spotlight</item>
+        <item>stage</item>
+        <item>steam locomotive</item>
+        <item>steel arch bridge</item>
+        <item>steel drum</item>
+        <item>stethoscope</item>
+        <item>stole</item>
+        <item>stone wall</item>
+        <item>stopwatch</item>
+        <item>stove</item>
+        <item>strainer</item>
+        <item>streetcar</item>
+        <item>stretcher</item>
+        <item>studio couch</item>
+        <item>stupa</item>
+        <item>submarine</item>
+        <item>suit</item>
+        <item>sundial</item>
+        <item>sunglass</item>
+        <item>sunglasses</item>
+        <item>sunscreen</item>
+        <item>suspension bridge</item>
+        <item>swab</item>
+        <item>sweatshirt</item>
+        <item>swimming trunks</item>
+        <item>swing</item>
+        <item>switch</item>
+        <item>syringe</item>
+        <item>table lamp</item>
+        <item>tank</item>
+        <item>tape player</item>
+        <item>teapot</item>
+        <item>teddy</item>
+        <item>television</item>
+        <item>tennis ball</item>
+        <item>thatch</item>
+        <item>theater curtain</item>
+        <item>thimble</item>
+        <item>thresher</item>
+        <item>throne</item>
+        <item>tile roof</item>
+        <item>toaster</item>
+        <item>tobacco shop</item>
+        <item>toilet seat</item>
+        <item>torch</item>
+        <item>totem pole</item>
+        <item>tow truck</item>
+        <item>toyshop</item>
+        <item>tractor</item>
+        <item>trailer truck</item>
+        <item>tray</item>
+        <item>trench coat</item>
+        <item>tricycle</item>
+        <item>trimaran</item>
+        <item>tripod</item>
+        <item>triumphal arch</item>
+        <item>trolleybus</item>
+        <item>trombone</item>
+        <item>tub</item>
+        <item>turnstile</item>
+        <item>typewriter keyboard</item>
+        <item>umbrella</item>
+        <item>unicycle</item>
+        <item>upright</item>
+        <item>vacuum</item>
+        <item>vase</item>
+        <item>vault</item>
+        <item>velvet</item>
+        <item>vending machine</item>
+        <item>vestment</item>
+        <item>viaduct</item>
+        <item>violin</item>
+        <item>volleyball</item>
+        <item>waffle iron</item>
+        <item>wall clock</item>
+        <item>wallet</item>
+        <item>wardrobe</item>
+        <item>warplane</item>
+        <item>washbasin</item>
+        <item>washer</item>
+        <item>water bottle</item>
+        <item>water jug</item>
+        <item>water tower</item>
+        <item>whiskey jug</item>
+        <item>whistle</item>
+        <item>wig</item>
+        <item>window screen</item>
+        <item>window shade</item>
+        <item>Windsor tie</item>
+        <item>wine bottle</item>
+        <item>wing</item>
+        <item>wok</item>
+        <item>wooden spoon</item>
+        <item>wool</item>
+        <item>worm fence</item>
+        <item>wreck</item>
+        <item>yawl</item>
+        <item>yurt</item>
+        <item>web site</item>
+        <item>comic book</item>
+        <item>crossword puzzle</item>
+        <item>street sign</item>
+        <item>traffic light</item>
+        <item>book jacket</item>
+        <item>menu</item>
+        <item>plate</item>
+        <item>guacamole</item>
+        <item>consomme</item>
+        <item>hot pot</item>
+        <item>trifle</item>
+        <item>ice cream</item>
+        <item>ice lolly</item>
+        <item>French loaf</item>
+        <item>bagel</item>
+        <item>pretzel</item>
+        <item>cheeseburger</item>
+        <item>hotdog</item>
+        <item>mashed potato</item>
+        <item>head cabbage</item>
+        <item>broccoli</item>
+        <item>cauliflower</item>
+        <item>zucchini</item>
+        <item>spaghetti squash</item>
+        <item>acorn squash</item>
+        <item>butternut squash</item>
+        <item>cucumber</item>
+        <item>artichoke</item>
+        <item>bell pepper</item>
+        <item>cardoon</item>
+        <item>mushroom</item>
+        <item>Granny Smith</item>
+        <item>strawberry</item>
+        <item>orange</item>
+        <item>lemon</item>
+        <item>fig</item>
+        <item>pineapple</item>
+        <item>banana</item>
+        <item>jackfruit</item>
+        <item>custard apple</item>
+        <item>pomegranate</item>
+        <item>hay</item>
+        <item>carbonara</item>
+        <item>chocolate sauce</item>
+        <item>dough</item>
+        <item>meat loaf</item>
+        <item>pizza</item>
+        <item>potpie</item>
+        <item>burrito</item>
+        <item>red wine</item>
+        <item>espresso</item>
+        <item>cup</item>
+        <item>eggnog</item>
+        <item>alp</item>
+        <item>bubble</item>
+        <item>cliff</item>
+        <item>coral reef</item>
+        <item>geyser</item>
+        <item>lakeside</item>
+        <item>promontory</item>
+        <item>sandbar</item>
+        <item>seashore</item>
+        <item>valley</item>
+        <item>volcano</item>
+        <item>ballplayer</item>
+        <item>groom</item>
+        <item>scuba diver</item>
+        <item>rapeseed</item>
+        <item>daisy</item>
+        <item>yellow ladys slipper</item>
+        <item>corn</item>
+        <item>acorn</item>
+        <item>hip</item>
+        <item>buckeye</item>
+        <item>coral fungus</item>
+        <item>agaric</item>
+        <item>gyromitra</item>
+        <item>stinkhorn</item>
+        <item>earthstar</item>
+        <item>hen-of-the-woods</item>
+        <item>bolete</item>
+        <item>ear</item>
+        <item>toilet tissue</item>
+    </string-array>
+</resources>

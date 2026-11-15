@@ -1,0 +1,298 @@
+package id.cv.catvision.ui
+
+import android.Manifest
+import android.os.Bundle
+import android.content.pm.PackageManager
+import android.util.Size
+import android.widget.FrameLayout
+import androidx.activity.ComponentActivity
+import androidx.activity.enableEdgeToEdge
+import androidx.activity.compose.setContent
+import androidx.activity.registerForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.viewModels
+import androidx.camera.core.CameraSelector
+import androidx.camera.core.ImageAnalysis
+import androidx.camera.core.ImageCapture
+import androidx.camera.core.Preview
+import androidx.camera.lifecycle.ProcessCameraProvider
+import androidx.camera.view.PreviewView
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.align
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Card
+import androidx.compose.material3.FilledIconButton
+import androidx.compose.material3.Icon
+import androidx.compose.material.icons.Icons
+
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.LocalContext
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.viewmodel.compose.viewModel
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+import kotlin.math.roundToInt
+
+class MainActivity : androidx.activity.ComponentActivity() {
+
+    private val viewModel: CatVisionViewModel by viewModels()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContent {
+            CatVisionTheme {
+                CameraScreen()
+            }
+        }
+    }
+
+    @Composable
+    fun CameraScreen() {
+        val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+        val context = LocalContext.current
+
+        val permissionLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+            if (granted) {
+                viewModel.startCamera()
+            } else {
+                viewModel.showError("Camera permission denied")
+            }
+        }
+
+        LaunchedEffect(Unit) {
+            if (ContextCompat.checkSelfPermission(context, Manifest.permission.CAMERA)
+                == PackageManager.PERMISSION_GRANTED
+            ) {
+                viewModel.startCamera()
+            } else {
+                permissionLauncher.launch(Manifest.permission.CAMERA)
+            }
+        }
+
+        Column(modifier = Modifier.fillMaxSize().statusBarsPadding()) {
+            when (val st = uiState.status) {
+                is UiStatus.CatDetected -> CatDetectedBanner(st)
+                is UiStatus.Running, is UiStatus.Paused -> StatusBanner(st)
+                else -> StatusBanner(st)
+            }
+            CameraPreview(
+                modifier = Modifier.fillMaxSize(),
+                onPhoto = { viewModel.takePhoto() },
+                onPreviewView = { viewModel.setPreviewView(it) }
+            )
+            BottomControls(
+                isCameraReady = uiState.isCameraReady,
+                isRunning = uiState.isRunning,
+                onStart = { viewModel.startCamera() },
+                onStop = { viewModel.stopCamera() },
+                onPhoto = { viewModel.takePhoto() },
+                hasHistory = uiState.history.isNotEmpty(),
+                onHistory = { viewModel.closeHistory() },
+                lastPhoto = uiState.lastPhoto
+            )
+        }
+
+        if (uiState.history.isNotEmpty()) {
+            HistorySheet(items = uiState.history, onClose = { viewModel.closeHistory() })
+        }
+    }
+
+    @Composable
+    fun CameraPreview(
+        modifier: Modifier = Modifier,
+        onPhoto: () -> Unit,
+        onPreviewView: (androidx.camera.view.PreviewView) -> Unit
+    ) {
+        val context = LocalContext.current
+        val cameraProviderFuture = remember { ProcessCameraProvider.getInstance(context) }
+        var previewView by remember { mutableStateOf<androidx.camera.view.PreviewView?>(null) }
+
+        LaunchedEffect(previewView) {
+            previewView ?: return@LaunchedEffect
+            viewModel.setPreviewView(previewView)
+            viewModel.startCamera()
+        }
+
+        Box(modifier = modifier) {
+            androidx.compose.ui.platform.AndroidView(
+                factory = { ctx ->
+                    val v = PreviewView(ctx).apply {
+                        layoutParams = FrameLayout.LayoutParams(
+                            FrameLayout.LayoutParams.MATCH_PARENT,
+                            FrameLayout.LayoutParams.MATCH_PARENT
+                        )
+                        surfaceProvider = PreviewView.SurfaceProvider { surface, _ -> surface }
+                    }
+                    onPreviewView(v)
+                    v
+                },
+                modifier = Modifier.matchParentSize()
+            )
+        }
+    }
+
+    @Composable
+    fun StatusBanner(status: UiStatus) {
+        Surface(
+            modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(horizontal = 12.dp, vertical = 8.dp),
+            color = statusBg,
+            shape = MaterialTheme.shapes.small
+        ) {
+            Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
+                val triple = when (status) {
+                    is UiStatus.CatDetected -> Triple(Icons.Filled.SentimentSatisfiedAlt, "Kucing terdeteksi!", " ${status.label} ${(status.confidence * 100).roundToInt()}%")
+                    is UiStatus.Running -> Triple(Icons.Filled.PlayArrow, "Monitoring", "aktif")
+                    is UiStatus.Paused -> Triple(Icons.Filled.Pause, "Terputus", "menunggu")
+                    else -> Triple(Icons.Filled.SensorActive, "Siap", "mengaktifkan kamera")
+                }
+                val icon = triple.first
+                val label = triple.second
+                val muted = triple.third
+                Icon(icon, contentDescription = null, tint = catAccent, modifier = Modifier.size(24.dp))
+                Spacer(modifier = Modifier.width(12.dp))
+                Text(label, color = statusBorder, fontWeight = FontWeight.SemiBold, fontSize = 16.sp)
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(muted, color = Color(0xFF9AA4B2), fontSize = 14.sp)
+            }
+        }
+    }
+
+    @Composable
+    fun CatDetectedBanner(st: UiStatus.CatDetected) {
+        Box(
+            modifier = Modifier.fillMaxWidth().statusBarsPadding().padding(horizontal = 12.dp, vertical = 8.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Text(
+                    text = "Kucing terdeteksi!",
+                    color = catAccent, fontWeight = FontWeight.Bold, fontSize = 20.sp, textAlign = TextAlign.Center
+                )
+                Text(
+                    text = "${st.label} \u2022 ${(st.confidence * 100).roundToInt()}%",
+                    color = Color(0xFFF2F4F8), fontSize = 16.sp
+                )
+            }
+        }
+    }
+
+    @Composable
+    fun BottomControls(
+        isCameraReady: Boolean,
+        isRunning: Boolean,
+        onStart: () -> Unit,
+        onStop: () -> Unit,
+        onPhoto: () -> Unit,
+        hasHistory: Boolean,
+        onHistory: () -> Unit,
+        lastPhoto: ByteArray?
+    ) {
+        Box(
+            modifier = Modifier.fillMaxWidth().height(72.dp),
+            contentAlignment = Alignment.BottomCenter
+        ) {
+            Surface(
+                modifier = Modifier.matchParentSize(),
+                color = statusBg,
+                shape = MaterialTheme.shapes.medium
+            ) {
+                Row(modifier = Modifier.padding(8.dp), horizontalArrangement = Arrangement.SpaceEvenly) {
+                FilledIconButton(
+                    onClick = { if (isCameraReady) onStart() else {} },
+                    enabled = isCameraReady && !isRunning
+                ) {
+                    Icon(Icons.Filled.PlayArrow, contentDescription = "Mulai", tint = catAccent)
+                }
+                FilledIconButton(
+                    onClick = { if (isCameraReady) onPhoto() else {} },
+                    enabled = isCameraReady && isRunning
+                ) {
+                    val tint = if (isRunning) catAccent else Color(0x66FFFFFF)
+                    Icon(Icons.Filled.CameraAlt, contentDescription = "Foto", tint = tint)
+                }
+                Spacer(modifier = Modifier.weight(1f))
+                FilledIconButton(onClick = { if (isRunning) onStop() else {} }, enabled = isRunning) {
+                    Icon(Icons.Filled.Stop, contentDescription = "Hentikan", tint = catAccentDark)
+                }
+                FilledIconButton(onClick = onHistory, enabled = hasHistory) {
+                    Icon(Icons.Filled.History, contentDescription = "Riwayat", tint = catAccent)
+                }
+            }
+        }
+    }
+
+    @Composable
+    fun HistorySheet(items: List<HistoryItem>, onClose: () -> Unit) {
+        ModalBottomSheet(
+            onDismissRequest = onClose,
+            shape = MaterialTheme.shapes.medium,
+            containerColor = statusBg
+        ) {
+            Column(Modifier.padding(16.dp)) {
+                Text(
+                    text = "Riwayat ${items.size}",
+                    color = Color(0xFFF2F4F8), fontWeight = FontWeight.Bold, fontSize = 18.sp, modifier = Modifier.padding(bottom = 12.dp)
+                )
+                if (items.isEmpty()) {
+                    Text("Belum ada riwayat", color = Color(0xFF9AA4B2))
+                } else {
+                    items.forEach { item -> HistoryRow(item = item) }
+                }
+            }
+        }
+    }
+
+    @Composable
+    fun HistoryRow(item: HistoryItem) {
+        Card(modifier = Modifier.fillMaxWidth().padding(vertical = 6.dp), shape = MaterialTheme.shapes.small) {
+            Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = item.label,
+                    color = Color(0xFFF2F4F8), fontWeight = FontWeight.SemiBold,
+                    modifier = Modifier.weight(1f)
+                )
+                Text(
+                    text = "${item.confidence * 100f}%",
+                    color = catAccent, fontWeight = FontWeight.Bold, modifier = Modifier.padding(end = 12.dp)
+                )
+            }
+        }
+    }
+}
+
+private val catAccent = Color(0xFFFF7A1A)
+private val catAccentDark = Color(0xFFE06010)
+private val statusBg = Color(0xFF1A1D24)
+private val statusBorder = Color(0xFF3A4150)

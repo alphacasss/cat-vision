@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CatVision</string>
+    <string name="camera">Kamera</string>
+    <string name="detection">Deteksi</string>
+    <string name="stop">Hentikan</string>
+    <string name="cat_detected">Kucing terdeteksi!</string>
+    <string name="no_cat">Tidak ada kucing di sini</string>
+    <string name="cat_breed">Ras kucing</string>
+    <string name="confidence">Keyakinan</string>
+    <string name="take_photo">Foto</string>
+    <string name="history">Riwayat</string>
+    <string name="no_history">Belum ada riwayat deteksi</string>
+    <string name="detected">Ditemukan</string>
+    <string name="at">pada</string>
+    <string name="score">score</string>
+    <string name="close">Tutup</string>
+    <string name="sensor_info">Sensor</string>
+    <string name="status_ready">Siap</string>
+    <string name="status_scanning">Sedang memindai…</string>
+    <string name="status_error">Error</string>
+    <string name="loading_model">Memuat model AI…</string>
+</resources>

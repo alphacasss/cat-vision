@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cat_accent">#FF7A1A</color>
+    <color name="cat_accent_dark">#E06010</color>
+    <color name="bg_deep">#0F1115</color>
+    <color name="bg_card">#1A1D24</color>
+    <color name="bg_surface">#232732</color>
+    <color name="border">#3A4150</color>
+    <color name="text_primary">#F2F4F8</color>
+    <color name="text_secondary">#9AA4B2</color>
+    <color name="text_muted">#6B7280</color>
+    <color name="success">#4ADE80</color>
+    <color name="warning">#FBBF24</color>
+    <color name="error">#F87171</color>
+    <color name="box_color">#FF7A1A</color>
+    <color name="cat_head">#FFB454</color>
+    <color name="cat_body">#FF6A1A</color>
+</resources>
