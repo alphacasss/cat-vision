@@ -1,9 +1,9 @@
-# CatVision — Android CCTV Monitor (Cat Breed Detection)
+# CatVision — Cat Breed Detection
 
-Android application that monitors CCTV cameras and detects **cat breeds** using
+Android application that monitors the camera and detects **cat breeds** using
 on-device **TensorFlow Lite (MobileNetV2)**. The app uses CameraX for camera
 input, runs inference locally on the device, and stores detection history in
-Room (SQLite). Remote access is possible via port forwarding, VPN, or DDNS.
+Room (SQLite).
 
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.1.21-7F52FF?logo=kotlin)
 ![Gradle](https://img.shields.io/badge/Gradle-8.11.1-02303A?logo=gradle)
@@ -96,24 +96,6 @@ keytool -genkey -v \
 
 > **Note:** The `keystore/` directory is git-ignored. Keep your keystore
 > private — losing it means you cannot sign new releases of the same app.
-
-## 🌐 CatVision vs `android-cctv`
-
-`CatVision` and `android-cctv` are **two separate projects**. They are NOT
-the same codebase.
-
-| | `cat-vision` | `android-cctv` |
-|---|---|---|
-| Tujuan | **Deteksi ras kucing (cat breed)** dari kamera HP / foto | **Monitor CCTV** (Hikvision) |
-| Input | Kamera HP / galeri foto | CCTV jarak jauh (ISAPI + RTSP) |
-| AI / ML | MobileNetV2 TFLite (on-device) | — |
-| Koneksi jaringan | Opsional (hanya galeri) | Wajib (VPN / port forward / DDNS) |
-| Key library | CameraX, TensorFlow Lite, Room, Compose | libVLC 3.7.7, ISAPI |
-
-> Remote access seperti port forwarding, VPN, atau DDNS berlaku untuk
-> `android-cctv` (melihat aktifitas CCTV dari luar jaringan).
-> **CatVision tidak perlu "remote access"** karena semuanya berjalan
-> on-device; koneksi jaringan hanya dibutuhkan kalau Anda mengakses galeri.
 
 ## 📁 Project Structure
 
