@@ -48,10 +48,10 @@ Room (SQLite). Remote access is possible via port forwarding, VPN, or DDNS.
 ```
 
 The debug APK is output to:
-`library.androida/app/build/outputs/apk/debug/app-debug.apk`
+`cat-vision/app/build/outputs/apk/debug/app-debug.apk`
 
 The release APK is output to:
-`library.androida/app/build/outputs/apk/release/app-release.apk`
+`cat-vision/app/build/outputs/apk/release/app-release.apk`
 
 ### Device install
 
@@ -97,18 +97,23 @@ keytool -genkey -v \
 > **Note:** The `keystore/` directory is git-ignored. Keep your keystore
 > private — losing it means you cannot sign new releases of the same app.
 
-## 🌐 Remote Access (CCTV usage)
+## 🌐 CatVision vs `android-cctv`
 
-The app monitors cameras via **ISAPI** (Hikvision-style) and/or **RTSP**.
-To access your camera feed remotely:
+`CatVision` and `android-cctv` are **two separate projects**. They are NOT
+the same codebase.
 
-1. **Port forwarding** — forward an external port to your router's internal
-   IP (e.g. `192.168.1.100`, port `80` or `8080`).
-2. **VPN** — the most secure option (WireGuard, OpenVPN, etc.).
-3. **DDNS** — map a dynamic IP to a stable hostname.
+| | `cat-vision` | `android-cctv` |
+|---|---|---|
+| Tujuan | **Deteksi ras kucing (cat breed)** dari kamera HP / foto | **Monitor CCTV** (Hikvision) |
+| Input | Kamera HP / galeri foto | CCTV jarak jauh (ISAPI + RTSP) |
+| AI / ML | MobileNetV2 TFLite (on-device) | — |
+| Koneksi jaringan | Opsional (hanya galeri) | Wajib (VPN / port forward / DDNS) |
+| Key library | CameraX, TensorFlow Lite, Room, Compose | libVLC 3.7.7, ISAPI |
 
-The app is designed for **on-device** inference (no server required), so
-remote access only affects where the camera feed is pulled from.
+> Remote access seperti port forwarding, VPN, atau DDNS berlaku untuk
+> `android-cctv` (melihat aktifitas CCTV dari luar jaringan).
+> **CatVision tidak perlu "remote access"** karena semuanya berjalan
+> on-device; koneksi jaringan hanya dibutuhkan kalau Anda mengakses galeri.
 
 ## 📁 Project Structure
 
